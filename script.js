@@ -23,3 +23,6 @@ function myFunction() {
   document.getElementById("demo").innerHTML = "hello Sammy";
   document.getElementById("demo2").innerHTML = "God bless you!";
 }
+
+let carName = "volve";
+document.getElementById("demo3").innerHTML = carName;
