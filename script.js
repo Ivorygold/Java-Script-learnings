@@ -26,3 +26,16 @@ function myFunction() {
 
 let carName = "volve";
 document.getElementById("demo3").innerHTML = carName;
+
+//constant Array
+const cars = ["saab", "volve", "Bmw"];
+cars[0] = "toyota";
+cars.push("audi");
+
+console.log(cars); // this console prints output on the console terminal of a browser
+document.getElementById("demo4").innerHTML = cars;
+
+const car = { type: "fiat", model: "500", color: white };
+car.color = "red";
+car.owner = "johnson";
+document.getElementById("demo5").innerHTML = car.owner; // something is wrong
