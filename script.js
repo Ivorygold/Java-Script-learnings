@@ -160,3 +160,44 @@ while (myNumber != Infinity) {
 }
 console.log(TEXT);
 document.getElementById("demo16").innerHTML = TEXT;
+
+//NUMBER METHOD
+//toString()
+
+let q = 123;
+document.getElementById("demo17").innerHTML =
+  q.toString() + "<br>" + (123).toString() + "<br>" + (100 + 23).toString();
+
+//toExponential() Method
+let g = 9.657;
+document.getElementById("demo18").innerHTML =
+  g.toExponential() +
+  "<br>" +
+  g.toExponential(2) +
+  "<br>" +
+  g.toExponential(4) +
+  "<br>" +
+  g.toExponential(6);
+
+//toFixed()method
+// this is perfect when working with money
+let o = 909.76;
+document.getElementById("demo19").innerHTML =
+  o.toFixed(0) +
+  "<br>" +
+  o.toFixed(2) +
+  "<br>" +
+  o.toFixed(4) +
+  "<br>" +
+  o.toFixed(6);
+
+//toPrecision()Method
+let p = 909.76;
+document.getElementById("demo20").innerHTML =
+  p.toPrecision(0) +
+  "<br>" +
+  p.toPrecision(2) +
+  "<br>" +
+  p.toPrecision(4) +
+  "<br>" +
+  p.toPrecision(6);
