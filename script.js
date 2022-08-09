@@ -35,7 +35,20 @@ cars.push("audi");
 console.log(cars); // this console prints output on the console terminal of a browser
 document.getElementById("demo4").innerHTML = cars;
 
-const car = { type: "fiat", model: "500", color: white };
+/*const car = { type: "fiat", model: "500", color: white };
 car.color = "red";
 car.owner = "johnson";
 document.getElementById("demo5").innerHTML = car.owner; // something is wrong
+*/
+
+let c = myFunction(4, 3);
+function myFunction(a, b) {
+  return a * b;
+}
+console.log(c);
+
+function toCelsius(fahrenheit) {
+  return (5 / 9) * (fahrenheit - 32);
+}
+document.getElementById("demo6").innerHTML = toCelsius((100).convert) = math.ceil;
+
