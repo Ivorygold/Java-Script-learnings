@@ -112,3 +112,51 @@ document.getElementById("demo10").innerHTML = text.charAt(2);
 let v = "a,d,t,v,t";
 const myArray = v.split(",");
 document.getElementById("demo11").innerHTML = myArray[0];
+
+//Java script template bliterals
+// back-tics syntax
+let firstName = "goodnews";
+let lastName = "osondu";
+let Text = `welcome dear ${firstName}, ${lastName}!`;
+
+document.getElementById("demo12").innerHTML = Text;
+
+//HTML template
+let header = "Template Literal";
+let tag = ["template literal", "javascript", "Es6"];
+let html = `<h3>${header}</h3> <ul>`;
+for (const x of tag) {
+  html += `<li>${x}</li>`;
+}
+html += `</ul>`;
+
+document.getElementById("demo13").innerHTML = html;
+
+//JS Numbers
+let D = 10;
+let E = 20;
+let Z = "THE RESULT IS:" + D + E;
+document.getElementById("demo14").innerHTML = Z;
+// this will calculate the whole data as a string variable and not as a number.
+
+let d = 10;
+let e = 20;
+let j = "30";
+let result = d + e + j;
+document.getElementById("demo15").innerHTML = result;
+console.log(result);
+
+//numeric string
+/*
+javascript will convert string to number when dividing , multiplying
+and substracting but it doesnt do so when adding.
+*/
+
+let myNumber = 2;
+let TEXT = "";
+while (myNumber != Infinity) {
+  myNumber = myNumber * myNumber;
+  TEXT = TEXT + myNumber + "<br>";
+}
+console.log(TEXT);
+document.getElementById("demo16").innerHTML = TEXT;
