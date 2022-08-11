@@ -269,3 +269,52 @@ function myFunction(value) {
 */
 
 //.PUSH is the easiest ways of adding to an array
+
+//converting array to strings
+
+const dudu = ["banana", "oranges", "pinapple", "pear"];
+document.getElementById("demo29").innerHTML = dudu.toString();
+
+//pop()
+const gone = ["sugaar", "oranges", "pinapple", "pear"];
+document.getElementById("demo30").innerHTML = gone;
+gone.pop();
+document.getElementById("demo30").innerHTML = gone;
+
+//push()
+const done = ["sugaar", "oranges", "pinapple", "pear"];
+document.getElementById("demo31").innerHTML = done;
+done.push("zobo");
+document.getElementById("demo31").innerHTML = done;
+
+//shift()
+//removes the first element in an array
+const hones = ["sugaar", "oranges", "pinapple", "pear"];
+document.getElementById("demo32").innerHTML = hones;
+hones.shift();
+document.getElementById("demo32").innerHTML = hones;
+
+//unshift()
+//adds a new element before the  first element in an array
+const uones = ["sugaar", "oranges", "pinapple", "pear"];
+document.getElementById("demo33").innerHTML = uones;
+uones.unshift("smove");
+document.getElementById("demo33").innerHTML = uones;
+
+//Changing Element
+const yarn = ["hope", "grace", "blessed", "mavelous"];
+yarn[0] = "kiwi";
+document.getElementById("demo34").innerHTML = yarn;
+
+//array.length(),  helps to add an element to the array without using.push()
+yarn[yarn.length] = "kuli-kuli";
+document.getElementById("demo35").innerHTML = yarn;
+
+//Array splice
+// the adds a new element to the array use the format above
+
+const vans = ["higth", "lower", "jumper", "under"];
+document.getElementById("demo36").innerHTML = "Original Array:<br> " + vans;
+let remove = vans.splice(2, 2, "lemon", "kiwi");
+document.getElementById("demo37").innerHTML = "New Array:<br>" + vans;
+document.getElementById("demo38").innerHTML = "remove items:<br> " + remove;
