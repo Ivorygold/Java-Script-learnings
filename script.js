@@ -318,3 +318,49 @@ document.getElementById("demo36").innerHTML = "Original Array:<br> " + vans;
 let remove = vans.splice(2, 2, "lemon", "kiwi");
 document.getElementById("demo37").innerHTML = "New Array:<br>" + vans;
 document.getElementById("demo38").innerHTML = "remove items:<br> " + remove;
+
+// Array .sort
+const vinc = ["higth", "lower", "jumper", "under"];
+document.getElementById("demo39").innerHTML = vinc;
+
+vinc.sort();
+document.getElementById("demo40").innerHTML = vinc;
+
+//REVERSING AN ARRAY
+/**
+ * by first displaying and array,
+ * sort the array and reverse give us an array in a descending order
+ */
+
+//Numerical sorting.
+const fig = [40, 789, 56, 4356, 1, 900];
+document.getElementById("demo41").innerHTML = fig;
+
+fig.sort(function (a, b) {
+  return a - b;
+});
+document.getElementById("demo42").innerHTML = fig;
+
+//SORTING AN ARRAY IN RANDOM
+const points = [40, 789, 56, 4356, 1, 900];
+document.getElementById("demo43").innerHTML = points;
+
+function myAction() {
+  points.sort(function () {
+    return 0.5 - Math.random();
+  });
+  document.getElementById("demo43").innerHTML = points;
+}
+
+//THE Fisher Yate Method is the better numerical sorting method
+const Points = [40, 789, 56, 4356, 1, 900];
+document.getElementById("demo44").innerHTML = Points;
+function myOction() {
+  for (let i = Points.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * 1);
+    let k = Points[i];
+    Points[i] = Points[j];
+    Points[j] = k;
+  }
+  document.getElementById("demo44").innerHTML = Points;
+}
