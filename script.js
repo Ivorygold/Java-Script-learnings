@@ -364,3 +364,71 @@ function myOction() {
   }
   document.getElementById("demo44").innerHTML = Points;
 }
+
+//ARRAY MAP
+
+/**
+ * it does not change the oriinal array
+ * it creates a new array by performing  function on each array element
+ * it doesnt act on array with out values
+ */
+{
+  const numbers1 = [45, 67, 8, 4, 90];
+  const numbers2 = numbers1.map(myFunction);
+  document.getElementById("demo45").innerHTML = numbers2;
+  function myFunction(value) {
+    return value * 2;
+  }
+}
+
+//array.filter
+/**
+ * it creates a new array with array element that psses a test
+ */
+{
+  const numbers = [34, 65, 7, 90, 657];
+  const over18 = numbers.filter(myFunction);
+  document.getElementById("demo46").innerHTML = over18;
+  function myFunction(value) {
+    return value > 40;
+  }
+}
+
+//REDUCE
+//reduces the array to a single value
+{
+  const numbers = [34, 65, 7, 90, 657];
+  let sum = numbers.reduce(myFunction);
+  document.getElementById("demo47").innerHTML = sum;
+  function myFunction(total, value) {
+    return total + value;
+  }
+}
+
+//ARRAY EVERY()
+
+//this checks if all the elements in array passed a particular trade
+{
+  const numbers = [23, 45, 5, 76, 5, 45, 12, 9];
+  let allover34 = numbers.every(myFunction);
+  document.getElementById("demo48").innerHTML = allover34;
+  function myFunction(value) {
+    return value > 34;
+  }
+}
+
+//array some()
+
+//ARRAY indexof()
+
+const Fruit = ["apple", "oranges", "pears", "avacado"];
+let position = Fruit.indexOf("oranges") + 1;
+document.getElementById("demo49").innerHTML =
+  " oranges are at the" + " " + position + " " + "POSITION";
+
+//ARRAY CONST
+
+//DATE  OUTPUT
+const L = new Date();
+document.getElementById("demo50").innerHTML = L;
+console.log(L);
