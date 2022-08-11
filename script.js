@@ -192,12 +192,80 @@ document.getElementById("demo19").innerHTML =
   o.toFixed(6);
 
 //toPrecision()Method
-let p = 909.76;
+let p = 90.76;
 document.getElementById("demo20").innerHTML =
-  p.toPrecision(0) +
+  p.toPrecision() +
   "<br>" +
   p.toPrecision(2) +
   "<br>" +
   p.toPrecision(4) +
   "<br>" +
   p.toPrecision(6);
+
+//the Number () Method
+// Number()
+//parseFloat()
+//parseINT()
+/*ALL these methods converts strings to a number
+  or values to a number */
+document.getElementById("demo21").innerHTML =
+  Number(true) +
+  "<br>" +
+  Number(false) +
+  "<br>" +
+  Number("10") +
+  "<br>" +
+  Number("10,54");
+
+//parseInt and parseFloat returns number and neglects spaces however, only first numbers are returned
+
+//JAVA-SCRIPT (MIN_VALUE and MAX_VALUE)
+
+let h = Number.MAX_VALUE;
+document.getElementById("demo22").innerHTML = h;
+
+let J = Number.MIN_VALUE;
+document.getElementById("demo23").innerHTML = J;
+
+//JAVASCRIPT ARRAY
+//accessing array element using index number
+
+const motor = ["saab", "volvo", "Bmw"];
+document.getElementById("demo24").innerHTML = motor[0];
+
+//changing an array element
+const vehicle = ["pathfinder", "toyota", "volvo", "lezus"];
+vehicle[0] = "opel";
+document.getElementById("demo25").innerHTML = vehicle;
+console.log((vehicle[0] = "Bus"));
+
+//array lenght property
+const fruit = ["banana", "oranges", "pinapple", "pear"];
+document.getElementById("demo26").innerHTML = fruit.length;
+console.log(fruit.length);
+
+//Looping array element
+const Fruits = ["banana", "oranges", "pinapple", "pear"];
+let fLen = Fruits.length;
+let Txt = "<ul>";
+for (let i = 0; i < fLen; i++) {
+  Txt += "<li>" + Fruits[i] + "</li>";
+}
+Txt += "</ul>";
+document.getElementById("demo27").innerHTML = Txt;
+
+//Array.forEach()
+/*
+const apples = ["banana", "oranges", "pinapple", "pear"];
+let txt = "<ul>";
+apples.forEach(myFunction);
+txt += "</ul>";
+
+document.getElementById("demo28").innerHTML = txt;
+
+function myFunction(value) {
+  txt += "<li>" + value + "</li>";
+}
+*/
+
+//.PUSH is the easiest ways of adding to an array
