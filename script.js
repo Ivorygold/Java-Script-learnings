@@ -432,3 +432,46 @@ document.getElementById("demo49").innerHTML =
 const L = new Date();
 document.getElementById("demo50").innerHTML = L;
 console.log(L);
+
+//using UTC to display standard date
+const W = new Date();
+document.getElementById("demo51").innerHTML = W.toUTCString();
+
+//Math operators,
+//this returns the value of x to the power of y
+
+let vit = Math.pow(8, 2);
+console.log(vit);
+
+//conditional operator
+const time = new Date().getHours();
+let greeting;
+if (time < 10) {
+  greeting = "good morning";
+} else if (time >= 20) {
+  greeting = "good day";
+} else {
+  greeting = "good evening";
+}
+document.getElementById("demo52").innerHTML = greeting;
+console.log(greeting);
+
+//JAVASCRIPT SWITCH
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "sunday";
+  case 1:
+    day = "monday";
+  case 2:
+    day = "tusday";
+  case 3:
+    day = "wednesday";
+  case 4:
+    day = "thursday";
+  case 5:
+    day = "friday";
+  case 6:
+    day = "saturday";
+}
+document.getElementById("demo53").innerHTML = "today is" + day;
