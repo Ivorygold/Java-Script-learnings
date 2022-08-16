@@ -461,17 +461,92 @@ let day;
 switch (new Date().getDay()) {
   case 0:
     day = "sunday";
+    break;
   case 1:
     day = "monday";
+    break;
   case 2:
     day = "tusday";
+    break;
   case 3:
     day = "wednesday";
+    break;
   case 4:
     day = "thursday";
+    break;
   case 5:
     day = "friday";
+    break;
   case 6:
     day = "saturday";
 }
-document.getElementById("demo53").innerHTML = "today is" + day;
+document.getElementById("demo53").innerHTML = "today is" + " " + day;
+
+//loop
+const car = ["Bmw", "audi", "toyota", "mitsibishi", "lezu"];
+let hops = "";
+for (let i = 0; i < car.length; i++) {
+  hops += car[i] + "<br>";
+}
+document.getElementById("demo54").innerHTML = hops;
+
+//note , even without numbering, loops can actually create figure without forml inialiazation
+let kips = " ";
+for (let i = 0; i < 5; i++) {
+  kips += " the numebr is" + " " + i + "<br>";
+}
+document.getElementById("demo55").innerHTML = kips;
+
+//LOOP SCOPE
+//using var in a loop
+
+//JS for in loop
+const jig = [893, 45, 65, 88, 4, 3];
+let boha = "";
+for (let x in jig) {
+  boha += jig[x] + "<br>";
+}
+console.log(boha);
+document.getElementById("demo56").innerHTML = boha;
+
+//Aray forEach
+const number = [2, 34, 2, 44.5, 65];
+{
+  let TxT = "";
+  number.forEach(myFunction);
+  document.getElementById("demo57").innerHTML = TxT;
+  function myFunction(value) {
+    TxT += value + "<br>";
+  }
+}
+
+//javascript for of loop
+const tiga = ["van", "tanker", "lezuz"];
+let lio = "";
+for (let x of tiga) {
+  lio += x + "<br>";
+}
+document.getElementById("demo58").innerHTML = lio;
+
+//while loop
+let vie = "";
+let i = 0;
+while (i < 10) {
+  vie += "<br> the number is" + " " + i;
+  i++;
+}
+document.getElementById("demo59").innerHTML = vie;
+
+//map forEach
+
+const fruitss = new Map([
+  ["allpe", 500],
+  ["bananas", 430],
+  ["orange", 300],
+  ["pear", 210],
+]);
+let Ttxt = "";
+fruitss.forEach(function (value, key) {
+  Ttxt += key + " = " + value + "<br>";
+});
+document.getElementById("demo60").innerHTML = Ttxt;
