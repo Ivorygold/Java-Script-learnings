@@ -550,3 +550,100 @@ fruitss.forEach(function (value, key) {
   Ttxt += key + " = " + value + "<br>";
 });
 document.getElementById("demo60").innerHTML = Ttxt;
+
+//nested javascript object nd array
+
+let n = "";
+const myobj = {
+  name: "john",
+  age: 40,
+  cars: [
+    {
+      name: "ford",
+      models: ["fiester", "focus", "muster"],
+    },
+    { name: "BMW", models: ["340", "x3", "x5"] },
+    {
+      name: "fiat",
+      models: ["500", "panda"],
+    },
+  ],
+};
+for (let i in myobj.cars) {
+  n += "<h2>" + myobj.cars[i].name + "</h2>";
+  for (let j in myobj.cars[i].models) {
+    n += myobj.cars[i].models[j] + "<br>";
+  }
+}
+document.getElementById("demo61").innerHTML = n;
+
+//javascript object method
+
+const person = {
+  firstName: "joe",
+  lastName: "nnadi",
+  id: 4563,
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  },
+};
+
+document.getElementById("demo62").innerHTML = person.fullName();
+
+//JAVASCRIPT async
+
+//CALLBACK
+/**CALL back function is a function passd as
+ * an argument to another function.
+ * this tecnique allows a function to call another fucction */
+
+//FUNCTION SEQUENCE
+function myDisplayer(some) {
+  document.getElementById("demo63").innerHTML = some;
+}
+
+function myFirst() {
+  myDisplayer("hello");
+}
+function mySecond() {
+  myDisplayer("goodbye");
+}
+myFirst();
+mySecond();
+
+//this will display hello.YES IT ALSO OVERIDE THE IRST FUNCTION
+
+function myFirst() {
+  myDisplayer("hello");
+}
+function mySecond() {
+  myDisplayer("goodbye");
+}
+
+mySecond();
+myFirst();
+
+function myDisplayer(some) {
+  document.getElementById("demo64").innerHTML = some;
+}
+
+//SEQUENCE CONTROL
+//CALCULATE SAVE AND DISPLAY
+
+function myDisplayer(some) {
+  document.getElementById("demo65").innerHTML = some;
+}
+function myCalculator(num1, num2) {
+  let sum = num1 + num2;
+  return sum;
+}
+let Result = myCalculator(5, 8);
+myDisplayer(Result);
+
+// FUNCTION RUNNING IN PARALLE WITH OTHER FUNCTIONS ARE CALLED ASYNCHRONOUS
+setTimeout(myFunction, 3000);
+function myFunction() {
+  document.getElementById("demo66").innerHTML = "i love you sweety!";
+}
+
+//WITH HTML DOM, JS CAN ACCESS AND CHANGE ALL THE ELEMEMTS OF AN HTML DOC
